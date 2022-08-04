@@ -1,0 +1,14 @@
+POST http://localhost:3003/user/register
+Content-Type: application/json
+
+{
+    "nome": "João",
+    "email": "jao@gmail.com",
+    "nascimento": "1948-08-25",
+    "telefone": "31999999999"
+}
+
+#######
+
+GET http://localhost:3003/user/getUsers
+Content-Type: application/json
