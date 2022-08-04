@@ -6,7 +6,7 @@ const Menu = () => {
     return(
         <Main>
             <img src={logo} alt="logo" />
-            MENU HEADER
+           
         </Main>
     )
 }

@@ -40,12 +40,12 @@ export const Header = styled.div`
       width: 70%;
       border: none;
       font-size: xx-large;
-      
     }
   }
 `;
 
 export const InputMaterial = styled(TextField)`
+  color: white;
   && {
     width: 100%;
   }
