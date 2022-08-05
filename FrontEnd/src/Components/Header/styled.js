@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import indexImage from "../../Assets/imagens/index-image.jpg";
+import { HelveticaUltraLt_0 } from "../../Assets/font/HelveticaUltraLt_0.ttf"
 
 export const Main = styled.div`
   display: flex;
@@ -14,6 +15,8 @@ export const Main = styled.div`
   background-position: center;
 `;
 
+
+
 export const TextBox = styled.div`
     display: flex;
     flex-direction: column;
@@ -23,9 +26,11 @@ export const TextBox = styled.div`
 `
 
 export const Text = styled.div`
-  font-family: Helvetica "sans-serif";
+  font-family: helvetica;
+  font-weight: lighter;
   color: white;
   width: 100%;
 `;
+
 
 

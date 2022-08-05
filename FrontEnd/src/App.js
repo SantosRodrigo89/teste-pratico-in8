@@ -1,7 +1,8 @@
 import React from "react";
 import Feed from "./Pages/Feed/feed";
-import { ThemeProvider } from "@mui/material";
+import {ThemeProvider } from "@mui/material";
 import theme from "./Constants/theme";
+
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
     <ThemeProvider theme={theme} >
      <Feed/>
     </ThemeProvider>
+    
   );
 }
 

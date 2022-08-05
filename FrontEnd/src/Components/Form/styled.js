@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 
 export const Header = styled.div`
   font-family: Helvetica 25, sans-serif;
+  font-weight: lighter;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +12,8 @@ export const Header = styled.div`
   width: 100%;
   p {
     color: white;
+    font-size: xxx-large;
+    
   }
   form {
     display: flex;
