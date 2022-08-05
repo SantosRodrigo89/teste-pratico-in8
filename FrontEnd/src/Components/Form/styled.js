@@ -48,7 +48,7 @@ export const Header = styled.div`
 `;
 
 export const InputMaterial = styled(TextField)`
-  color: white;
+  
   && {
     width: 100%;
   }

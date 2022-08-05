@@ -3,7 +3,14 @@ import axios from "axios";
 import { BASE_URL } from "../../Constants/url";
 import { useForm } from "../../Hooks/useForm";
 import { Header, InputMaterial } from "./styled";
-import { Input, TextField } from "@mui/material";
+import { colors, Input, TextField } from "@mui/material";
+
+
+/* const useStyles = makeStyles({
+  input: {
+    color: "blue"
+  }
+}); */
 
 const Form = () => {
   const [listaUsers, setListaUsers] = useState([]);
@@ -36,12 +43,18 @@ const Form = () => {
 
   useEffect(() => {}, []);
 
+ 
+
+  
+    /* const classes = useStyles(); */
+
   return (
     <div>
       <Header>
         <p>CADASTRO</p>
         <form onSubmit={onSubimitForm}>
           <InputMaterial
+            /* inputProps={{ className: classes.input }} */
             id="standard-basic"
             variant="standard"
             label="nome"

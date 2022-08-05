@@ -8,7 +8,9 @@ import {
   TableStyled,
   TableHead,
   TableRows,
+  ContainerScroll,
 } from "./styled";
+import ScrollToTop from "../scroll/scrollToTop";
 
 const Table = () => {
   const [listaUsers, setListaUsers] = useState([]);
@@ -45,6 +47,14 @@ const Table = () => {
     });
   }, [atualiza]);
 
+var dataInput = '2020-02-06';
+
+let data = new Date(dataInput);
+let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
+
+console.log(dataFormatada);
+
+  
   return (
     <div>
       <Content>
@@ -60,13 +70,18 @@ const Table = () => {
                 <ItemTable>NASCIMENTO</ItemTable>
                 <ItemTable>TELEFONE</ItemTable>
               </TableHead>
+
               {listaUsers.map((linha) => {
+                
+                // trata a data para exibição
+                let data = new Date(linha.nascimento);
+                let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
                 return (
-                  <TableRows>
+                  <TableRows key={linha.id}>
                     <ItemTable>{linha.id}</ItemTable>
                     <ItemTable>{linha.nome}</ItemTable>
                     <ItemTable>{linha.email}</ItemTable>
-                    <ItemTable>{linha.nascimento}</ItemTable>
+                    <ItemTable>{dataFormatada}</ItemTable>
                     <ItemTable>{linha.telefone}</ItemTable>
                   </TableRows>
                 );
@@ -77,7 +92,11 @@ const Table = () => {
           )}
          
         </Graphics>
+        
       </Content>
+      <ContainerScroll>
+        <ScrollToTop />
+        </ContainerScroll>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Header from "../../Components/Header/header";
 import Table from "../../Components/Table/table";
 import ScrollToTop from "../../Components/scroll/scrollToTop";
 
+
+
 const Feed = () => {
   return (
     <div>
@@ -13,10 +15,11 @@ const Feed = () => {
       </div>
       <div>
         <Form />
-        <ScrollToTop />
+       
       </div>
-      <div>
+      <div className="listaDeCadastro">
         <Table />
+       {/*  <ScrollToTop className="scroll" /> */}
       </div>
 
       <div>

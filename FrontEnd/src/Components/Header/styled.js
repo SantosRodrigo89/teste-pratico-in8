@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import indexImage from "../../Assets/imagens/index-image.jpg";
-import { HelveticaUltraLt_0 } from "../../Assets/font/HelveticaUltraLt_0.ttf"
+import { HelveticaUltraLt_0 } from "../../Assets/font/HelveticaUltraLt_0.ttf";
 
 export const Main = styled.div`
   display: flex;
@@ -15,22 +15,18 @@ export const Main = styled.div`
   background-position: center;
 `;
 
-
-
 export const TextBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50%;
-    width: 50%;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  width: 50%;
+`;
 
 export const Text = styled.div`
-  font-family: helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: lighter;
   color: white;
   width: 100%;
 `;
-
-
-

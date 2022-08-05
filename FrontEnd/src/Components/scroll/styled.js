@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const IconImage = styled.img`
 
+    display: flex;
+    justify-content: end;
     width: 50px;
     height: 50px;
     margin-right: 10px;
