@@ -1,4 +1,4 @@
-POST http://localhost:3003/user/register
+POST https://in8-back.herokuapp.com/user/register
 Content-Type: application/json
 
 {
@@ -10,5 +10,5 @@ Content-Type: application/json
 
 #######
 
-GET http://localhost:3003/user/getUsers
+GET https://in8-back.herokuapp.com/user/getUsers
 Content-Type: application/json
