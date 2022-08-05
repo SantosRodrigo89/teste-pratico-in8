@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import indexImage from "../../Assets/imagens/index-image.jpg";
-import { HelveticaUltraLt_0 } from "../../Assets/font/HelveticaUltraLt_0.ttf";
 
 export const Main = styled.div`
   display: flex;
@@ -27,6 +26,7 @@ export const Text = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: lighter;
+  font-size: xx-large;
   color: white;
   width: 100%;
 `;

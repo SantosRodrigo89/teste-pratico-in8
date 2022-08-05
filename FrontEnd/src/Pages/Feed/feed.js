@@ -3,9 +3,6 @@ import Footer from "../../Components/Footer/footer";
 import Form from "../../Components/Form/form";
 import Header from "../../Components/Header/header";
 import Table from "../../Components/Table/table";
-import ScrollToTop from "../../Components/scroll/scrollToTop";
-
-
 
 const Feed = () => {
   return (
@@ -17,9 +14,8 @@ const Feed = () => {
         <Form />
        
       </div>
-      <div className="listaDeCadastro">
+      <div>
         <Table />
-       {/*  <ScrollToTop className="scroll" /> */}
       </div>
 
       <div>

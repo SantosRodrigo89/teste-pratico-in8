@@ -4,11 +4,13 @@ import {ThemeProvider } from "@mui/material";
 import theme from "./Constants/theme";
 
 
+
 function App() {
   return (
 
     <ThemeProvider theme={theme} >
      <Feed/>
+    
     </ThemeProvider>
     
   );

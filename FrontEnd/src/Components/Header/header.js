@@ -5,8 +5,8 @@ import React from "react";
 const Header = () => {
   return (
     <Main>
+       <Menu />
       <TextBox>
-      <Menu />
         <Text>
           <h1>ESTÁGIO</h1>
           <h2>PROVA DE SELEÇÃO</h2>
