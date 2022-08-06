@@ -9,6 +9,8 @@ import {
   TableHead,
   TableRows,
   ContainerScroll,
+  NameTable,
+  NumberTable,
 } from "./styled";
 import ScrollToTop from "../scroll/scrollToTop";
 
@@ -47,14 +49,10 @@ const Table = () => {
     });
   }, [atualiza]);
 
-var dataInput = '2020-02-06';
+  const dataMask = (data) => {
+    return data.replace(/(\d{2})(\d{2})(\d{4})/, "$1/$2/$3");
+  }
 
-let data = new Date(dataInput);
-let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
-
-console.log(dataFormatada);
-
-  
   return (
     <div>
       <Content>
@@ -64,24 +62,25 @@ console.log(dataFormatada);
           {listaUsers.length > 0 ? (
             <TableStyled>
               <TableHead>
-                <ItemTable> </ItemTable>
-                <ItemTable>NOME</ItemTable>
-                <ItemTable>E-MAIL</ItemTable>
-                <ItemTable>NASCIMENTO</ItemTable>
-                <ItemTable>TELEFONE</ItemTable>
+                <NameTable> </NameTable>
+                <NameTable>NOME</NameTable>
+                <NameTable>E-MAIL</NameTable>
+                <NameTable>NASCIMENTO</NameTable>
+                <NameTable>TELEFONE</NameTable>
               </TableHead>
 
               {listaUsers.map((linha) => {
-                
+
                 // trata a data para exibição
                 let data = new Date(linha.nascimento);
                 let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
+
                 return (
                   <TableRows key={linha.id}>
-                    <ItemTable>{linha.id}</ItemTable>
+                    <NumberTable>{linha.id}</NumberTable>
                     <ItemTable>{linha.nome}</ItemTable>
                     <ItemTable>{linha.email}</ItemTable>
-                    <ItemTable>{dataFormatada}</ItemTable>
+                    <ItemTable>{dataMask(linha.nascimento)}</ItemTable>
                     <ItemTable>{linha.telefone}</ItemTable>
                   </TableRows>
                 );

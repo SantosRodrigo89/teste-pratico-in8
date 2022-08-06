@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import indexImage from "../../Assets/imagens/index-image.jpg";
+import indexMobileImage from "../../Assets/imagens/index-image.jpg";
 
 export const Main = styled.div`
   display: flex;
@@ -12,6 +13,10 @@ export const Main = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (max-width: 480px) {
+    background-image: url(${indexImage});
+  } ;
 `;
 
 export const TextBox = styled.div`

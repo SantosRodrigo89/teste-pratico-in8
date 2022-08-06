@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Montserrat','Segoe UI', 'Roboto', 'Oxygen',
@@ -12,29 +14,7 @@ code {
     monospace;
 }
 
-@media screen and (max-width: 480px){
 
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px){
-
-}
-  
-@media screen and (min-width: 769px) and (max-width: 1199px){
-
-}
-
-@media screen and (min-width: 1200px){
-
-}
-
-/* @font-face {
-  font-family: "HelveticaUltraLt_0";
-  src: local("HelveticaUltraLt_0"),
-   url("./font/HelveticaUltraLt_0.ttf") 
-  format("truetype");
-  font-weight: bold;
-  } */
 
   
 

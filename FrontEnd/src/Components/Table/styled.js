@@ -14,14 +14,20 @@ export const Content = styled.div`
   flex-direction: column;
   margin: 50px;
   align-items: center;
+
+  h1 {
+    align-items: center;
+    text-align: center;
+    color: #29abe2;
+  }
 `;
 
 export const Graphics = styled.div`
-  width: 50%;
-  /* display: flex;
-  margin: 7%; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  width: 100%;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export const TableStyled = styled.div`
@@ -33,20 +39,88 @@ export const TableStyled = styled.div`
 export const TableHead = styled.div`
   display: grid;
   grid-template-columns: 10% 20% 20% 20% 20%;
-  border-bottom: none;
-  
+  color: #012d51;
+
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  } ;
 `;
 
 export const TableRows = styled.div`
   display: grid;
   grid-template-columns: 10% 20% 20% 20% 20%;
+
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+  } ;
 `;
 
-export const ItemTable = styled.div`
-  border: 1px solid blue;
+export const NameTable = styled.div`
+ 
   padding: 12px;
   text-align: center;
- 
+  color: #012d51;
+
+  @media (max-width: 768px) {
+    padding: 10px
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+   
+  } ;
+  `;
+
+export const NumberTable = styled.div`
+
+  text-align: center;
+  color: #012d51;
+
+  @media (max-width: 768px) {
+    padding: 10px
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+   
+  } ;
+  `;
+
+export const ItemTable = styled.div`
+  border: 1px solid #29abe2;
+  padding: 12px;
+  text-align: center;
+  color: #808080;
+
+  @media (max-width: 768px) {
+    padding: 10px
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+   
+  } ;
 `;
 
 export const ContainerScroll = styled.div`

@@ -1,26 +1,21 @@
 import styled from "styled-components";
 
 export const NavStyle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: inherit;
 
-background-color: inherit;
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
+  a {
+    width: 33%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
-  li {
-    float: left;
-   
-  }
 
-  li a {
-    display: block;
-    padding: 8px;
-    
-    background-color: inherit;
-  }
 `;

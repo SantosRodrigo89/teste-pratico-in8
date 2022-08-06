@@ -3,14 +3,7 @@ import axios from "axios";
 import { BASE_URL } from "../../Constants/url";
 import { useForm } from "../../Hooks/useForm";
 import { Header, InputMaterial } from "./styled";
-import { colors, Input, TextField } from "@mui/material";
-
-
-/* const useStyles = makeStyles({
-  input: {
-    color: "blue"
-  }
-}); */
+import moment, { isMoment } from "moment";
 
 const Form = () => {
   const [listaUsers, setListaUsers] = useState([]);
@@ -40,13 +33,22 @@ const Form = () => {
         console.log(err.response);
       });
   };
-
   useEffect(() => {}, []);
 
- 
+  const maskDate = value => {
+    return value
+      .replace(/\D/g, "")
+      .replace(/(\d{2})(\d)/, "$1/$2")
+      .replace(/(\d{2})(\d)/, "$1/$2")
+      .replace(/(\d{4})(\d)/, "$1");
+  };
 
-  
-    /* const classes = useStyles(); */
+  const maskPhone = value => {
+    return value
+      .replace(/\D/g, "")
+      .replace(/(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d{4})(\d)/, "$1-$2");
+  };
 
   return (
     <div>
@@ -54,13 +56,12 @@ const Form = () => {
         <p>CADASTRO</p>
         <form onSubmit={onSubimitForm}>
           <InputMaterial
-            /* inputProps={{ className: classes.input }} */
             id="standard-basic"
             variant="standard"
             label="nome"
             name={"nome"}
             type={"text"}
-            placeholder="Nome"
+            placeholder="nome"
             value={form.nome}
             onChange={onChange}
             required
@@ -72,7 +73,7 @@ const Form = () => {
             label="email"
             name={"email"}
             type={"email"}
-            placeholder="Email"
+            placeholder="email"
             value={form.email}
             onChange={onChange}
             required
@@ -84,8 +85,8 @@ const Form = () => {
             label="nascimento"
             name={"nascimento"}
             type={"text"}
-            placeholder="Nascimento (aaaa-mm-dd)"
-            value={form.nascimento}
+            placeholder="nascimento"
+            value={maskDate(form.nascimento)}
             onChange={onChange}
             required
           />
@@ -96,8 +97,8 @@ const Form = () => {
             label="telefone"
             name={"telefone"}
             type={"tel"}
-            placeholder="Telefone (XX) X XXXX-XXXX"
-            value={form.telefone}
+            placeholder="telefone"
+            value={maskPhone(form.telefone)}
             onChange={onChange}
             required
           />
