@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../Constants/url";
 import { useForm } from "../../Hooks/useForm";
-import { Header, InputMaterial } from "./styled";
-import moment, { isMoment } from "moment";
+import { ContaninerStyledC, Header, InputMaterial } from "./styled";
+
 
 const Form = () => {
   const [listaUsers, setListaUsers] = useState([]);
@@ -51,7 +51,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <ContaninerStyledC>
       <Header>
         <p>CADASTRO</p>
         <form onSubmit={onSubimitForm}>
@@ -106,7 +106,7 @@ const Form = () => {
           <button type="submit"> CADASTRAR </button>
         </form>
       </Header>
-    </div>
+    </ContaninerStyledC>
   );
 };
 export default Form;

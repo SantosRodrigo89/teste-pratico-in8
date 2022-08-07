@@ -11,6 +11,11 @@ import {
   ContainerScroll,
   NameTable,
   NumberTable,
+  LastRows,
+  NameTable1,
+  NameTable2,
+  NameTable3,
+  ItemTable1,
 } from "./styled";
 import ScrollToTop from "../scroll/scrollToTop";
 
@@ -33,7 +38,6 @@ const Table = () => {
   };
 
   useEffect(() => {
-    
     getUsers();
 
     let total = 0;
@@ -51,51 +55,45 @@ const Table = () => {
 
   const dataMask = (data) => {
     return data.replace(/(\d{2})(\d{2})(\d{4})/, "$1/$2/$3");
-  }
+  };
 
   return (
     <div>
       <Content>
         <h1>LISTA DE CADASTRO</h1>
-        
+
         <Graphics>
           {listaUsers.length > 0 ? (
             <TableStyled>
               <TableHead>
                 <NameTable> </NameTable>
-                <NameTable>NOME</NameTable>
-                <NameTable>E-MAIL</NameTable>
-                <NameTable>NASCIMENTO</NameTable>
+                <NameTable1>NOME</NameTable1>
+                <NameTable2>E-MAIL</NameTable2>
+                <NameTable3>NASCIMENTO</NameTable3>
                 <NameTable>TELEFONE</NameTable>
               </TableHead>
 
-              {listaUsers.map((linha) => {
-
-                // trata a data para exibição
-                let data = new Date(linha.nascimento);
-                let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
-
-                return (
-                  <TableRows key={linha.id}>
-                    <NumberTable>{linha.id}</NumberTable>
-                    <ItemTable>{linha.nome}</ItemTable>
-                    <ItemTable>{linha.email}</ItemTable>
-                    <ItemTable>{dataMask(linha.nascimento)}</ItemTable>
-                    <ItemTable>{linha.telefone}</ItemTable>
-                  </TableRows>
-                );
+              {listaUsers.map(( linha ) => {
+           
+                  return (
+                    <TableRows key={linha.id}>
+                      <NumberTable>{linha.id}</NumberTable>
+                      <ItemTable>{linha.nome}</ItemTable>
+                      <ItemTable>{linha.email}</ItemTable>
+                      <ItemTable>{dataMask(linha.nascimento)}</ItemTable>
+                      <ItemTable1>{linha.telefone}</ItemTable1>
+                    </TableRows>
+                  );
               })}
             </TableStyled>
           ) : (
             <></>
           )}
-         
         </Graphics>
-        
       </Content>
       <ContainerScroll>
         <ScrollToTop />
-        </ContainerScroll>
+      </ContainerScroll>
     </div>
   );
 };

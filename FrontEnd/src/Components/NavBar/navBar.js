@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const NavBar = () => {
   return (
     <div >
-      <NavStyle>
+      <NavStyle >
         <AnchorLink href="#cadastro" offset="10">cadastro</AnchorLink>
         &bull;
         <AnchorLink href="#lista" offset="10">lista</AnchorLink>

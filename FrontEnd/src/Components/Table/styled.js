@@ -1,15 +1,8 @@
 import styled from "styled-components";
 
-export const Maincontainer = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-seriff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100vw;
-`;
-
 export const Content = styled.div`
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-seriff;
   display: flex;
   flex-direction: column;
   margin: 50px;
@@ -40,7 +33,7 @@ export const TableHead = styled.div`
   display: grid;
   grid-template-columns: 10% 20% 20% 20% 20%;
   color: #012d51;
-
+ 
   @media (max-width: 768px) {
     width: 600px;
   }
@@ -86,8 +79,69 @@ export const NameTable = styled.div`
   } ;
   `;
 
-export const NumberTable = styled.div`
+export const NameTable1 = styled.div`
 
+border-right: 1px solid #29abe2;
+border-left: 1px solid #29abe2 ;
+padding: 12px;
+text-align: center;
+color: #012d51;
+
+@media (max-width: 768px) {
+  padding: 10px
+}
+
+@media screen and (max-width: 480px) {
+  width: 80%;
+  display: none;
+  display: flex;
+  flex-direction: column;
+ 
+} ;
+`;
+
+export const NameTable2 = styled.div`
+
+border-right: 1px solid #29abe2;
+padding: 12px;
+text-align: center;
+color: #012d51;
+
+@media (max-width: 768px) {
+  padding: 10px
+}
+
+@media screen and (max-width: 480px) {
+  width: 80%;
+  display: none;
+  display: flex;
+  flex-direction: column;
+ 
+} ;
+`;
+
+export const NameTable3 = styled.div`
+
+border-right: 1px solid #29abe2;
+padding: 12px;
+text-align: center;
+color: #012d51;
+
+@media (max-width: 768px) {
+  padding: 10px
+}
+
+@media screen and (max-width: 480px) {
+  width: 80%;
+  display: none;
+  display: flex;
+  flex-direction: column;
+ 
+} ;
+`;
+
+export const NumberTable = styled.div`
+  border-top: 1px solid #29abe2;
   text-align: center;
   color: #012d51;
 
@@ -106,6 +160,28 @@ export const NumberTable = styled.div`
 
 export const ItemTable = styled.div`
   border: 1px solid #29abe2;
+  border-bottom: none;
+  padding: 12px;
+  text-align: center;
+  color: #808080;
+
+  @media (max-width: 768px) {
+    padding: 10px
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+   
+  } ;
+`;
+
+export const ItemTable1 = styled.div`
+  border: 1px solid #29abe2;
+  border-right: none;
+  border-bottom: none;
   padding: 12px;
   text-align: center;
   color: #808080;
@@ -129,3 +205,4 @@ export const ContainerScroll = styled.div`
   align-items: flex-end;
   padding: 0 3% 3% 0;
 `;
+
