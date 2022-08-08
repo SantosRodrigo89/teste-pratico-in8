@@ -5,21 +5,25 @@ export const Content = styled.div`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-seriff;
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin: 50px 50px 50px 100px;
   align-items: center;
-
+  
   h1 {
     align-items: center;
     text-align: center;
     color: #29abe2;
   }
+
+  @media screen and (max-width: 480px) {
+      
+  } ;
 `;
 
 export const Graphics = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
   }
 `;
 
@@ -88,7 +92,8 @@ text-align: center;
 color: #012d51;
 
 @media (max-width: 768px) {
-  padding: 10px
+  padding: 10px;
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -96,6 +101,7 @@ color: #012d51;
   display: none;
   display: flex;
   flex-direction: column;
+  border: 1px solid #29abe2;
  
 } ;
 `;
@@ -116,6 +122,7 @@ color: #012d51;
   display: none;
   display: flex;
   flex-direction: column;
+  border: 1px solid #29abe2;
  
 } ;
 `;
@@ -136,6 +143,7 @@ color: #012d51;
   display: none;
   display: flex;
   flex-direction: column;
+  border: 1px solid #29abe2;
  
 } ;
 `;
@@ -154,6 +162,8 @@ export const NumberTable = styled.div`
     display: none;
     display: flex;
     flex-direction: column;
+    border: 1px solid #29abe2;
+    background-color: #f5f5f5;
    
   } ;
   `;
@@ -161,6 +171,7 @@ export const NumberTable = styled.div`
 export const ItemTable = styled.div`
   border: 1px solid #29abe2;
   border-bottom: none;
+  border-right: none;
   padding: 12px;
   text-align: center;
   color: #808080;
@@ -174,6 +185,7 @@ export const ItemTable = styled.div`
     display: none;
     display: flex;
     flex-direction: column;
+    border: 1px solid #29abe2;
    
   } ;
 `;
@@ -195,6 +207,29 @@ export const ItemTable1 = styled.div`
     display: none;
     display: flex;
     flex-direction: column;
+    border: 1px solid #29abe2;
+   
+  } ;
+`;
+
+export const ItemTable2 = styled.div`
+  border: 1px solid #29abe2;
+  border-bottom: none;
+  border-right: none;
+  padding: 12px;
+  text-align: center;
+  color: #808080;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #29abe2;
    
   } ;
 `;

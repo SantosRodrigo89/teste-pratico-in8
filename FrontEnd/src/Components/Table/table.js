@@ -11,11 +11,11 @@ import {
   ContainerScroll,
   NameTable,
   NumberTable,
-  LastRows,
   NameTable1,
   NameTable2,
   NameTable3,
   ItemTable1,
+  ItemTable2,
 } from "./styled";
 import ScrollToTop from "../scroll/scrollToTop";
 
@@ -79,7 +79,7 @@ const Table = () => {
                     <TableRows key={linha.id}>
                       <NumberTable>{linha.id}</NumberTable>
                       <ItemTable>{linha.nome}</ItemTable>
-                      <ItemTable>{linha.email}</ItemTable>
+                      <ItemTable2>{linha.email}</ItemTable2>
                       <ItemTable>{dataMask(linha.nascimento)}</ItemTable>
                       <ItemTable1>{linha.telefone}</ItemTable1>
                     </TableRows>
