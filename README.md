@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/93896739/183318354-8750c02b-f7af-407a-a918-5f1cfc92b2dc.png)
 
  
-## Teste prático IN8
+## Teste prático IN8 Full Stack
  
 Projeto Full Stack proposto pela IN8
 - Site SPA
