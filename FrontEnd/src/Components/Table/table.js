@@ -9,6 +9,13 @@ import {
   TableHead,
   TableRows,
   ContainerScroll,
+  NameTable,
+  NumberTable,
+  NameTable1,
+  NameTable2,
+  NameTable3,
+  ItemTable1,
+  ItemTable2,
 } from "./styled";
 import ScrollToTop from "../scroll/scrollToTop";
 
@@ -31,7 +38,6 @@ const Table = () => {
   };
 
   useEffect(() => {
-    
     getUsers();
 
     let total = 0;
@@ -47,56 +53,47 @@ const Table = () => {
     });
   }, [atualiza]);
 
-var dataInput = '2020-02-06';
+  const dataMask = (data) => {
+    return data.replace(/(\d{2})(\d{2})(\d{4})/, "$1/$2/$3");
+  };
 
-let data = new Date(dataInput);
-let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
-
-console.log(dataFormatada);
-
-  
   return (
     <div>
       <Content>
         <h1>LISTA DE CADASTRO</h1>
-        
+
         <Graphics>
           {listaUsers.length > 0 ? (
             <TableStyled>
               <TableHead>
-                <ItemTable> </ItemTable>
-                <ItemTable>NOME</ItemTable>
-                <ItemTable>E-MAIL</ItemTable>
-                <ItemTable>NASCIMENTO</ItemTable>
-                <ItemTable>TELEFONE</ItemTable>
+                <NameTable> </NameTable>
+                <NameTable1>NOME</NameTable1>
+                <NameTable2>E-MAIL</NameTable2>
+                <NameTable3>NASCIMENTO</NameTable3>
+                <NameTable>TELEFONE</NameTable>
               </TableHead>
 
-              {listaUsers.map((linha) => {
-                
-                // trata a data para exibição
-                let data = new Date(linha.nascimento);
-                let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
-                return (
-                  <TableRows key={linha.id}>
-                    <ItemTable>{linha.id}</ItemTable>
-                    <ItemTable>{linha.nome}</ItemTable>
-                    <ItemTable>{linha.email}</ItemTable>
-                    <ItemTable>{dataFormatada}</ItemTable>
-                    <ItemTable>{linha.telefone}</ItemTable>
-                  </TableRows>
-                );
+              {listaUsers.map(( linha ) => {
+           
+                  return (
+                    <TableRows key={linha.id}>
+                      <NumberTable>{linha.id}</NumberTable>
+                      <ItemTable>{linha.nome}</ItemTable>
+                      <ItemTable2>{linha.email}</ItemTable2>
+                      <ItemTable>{dataMask(linha.nascimento)}</ItemTable>
+                      <ItemTable1>{linha.telefone}</ItemTable1>
+                    </TableRows>
+                  );
               })}
             </TableStyled>
           ) : (
             <></>
           )}
-         
         </Graphics>
-        
       </Content>
       <ContainerScroll>
         <ScrollToTop />
-        </ContainerScroll>
+      </ContainerScroll>
     </div>
   );
 };

@@ -22,7 +22,7 @@ connection
         id INT PRIMARY KEY AUTO_INCREMENT,
         nome VARCHAR(255)  NOT NULL,
         email VARCHAR(255)  NOT NULL,
-        nascimento DATE  NOT NULL,
+        nascimento VARCHAR(255)  NOT NULL,
         telefone VARCHAR(255)  NOT NULL
     );
 `

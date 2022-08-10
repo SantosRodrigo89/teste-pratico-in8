@@ -13,7 +13,6 @@ export const Header = styled.div`
   p {
     color: white;
     font-size: xxx-large;
-    
   }
   form {
     display: flex;
@@ -43,13 +42,35 @@ export const Header = styled.div`
       width: 70%;
       border: none;
       font-size: xx-large;
+
+      @media screen and (max-width: 480px) {
+        font-size: large;
+        text-align: center;
+      }
     }
   }
 `;
 
 export const InputMaterial = styled(TextField)`
-  
+  color: white;
   && {
     width: 100%;
+  }
+`;
+
+export const ContaninerStyledC = styled.div`
+  .MuiFormLabel-root {
+    color: white;
+  }
+
+  .MuiOutlinedInput-root {
+    & > fieldset {
+      color: white;
+      border-color: white;
+    }
+  }
+
+  .MuiInput-underline {
+    border-bottom-color: white;
   }
 `;

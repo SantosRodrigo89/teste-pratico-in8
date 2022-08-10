@@ -1,22 +1,16 @@
 import { NavStyle } from "./styled";
 import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-     
-      <NavStyle>
-        <ul>
-          <li>
-            <a href="/">Cadastro</a>
-          </li>
-          <li>
-            <a href="/about">Lista</a>
-          </li>
-          <li>
-            <a href="/contact">Sobre</a>
-          </li>
-        </ul>
+    <div>
+      <NavStyle >
+        <AnchorLink href="#cadastro" offset="10">cadastro</AnchorLink>
+        &bull;
+        <AnchorLink href="#lista" offset="10">lista</AnchorLink>
+        &bull;
+        <AnchorLink href="#sobre" offset="10">sobre</AnchorLink>
       </NavStyle>
     </div>
   );

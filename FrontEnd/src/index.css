@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Montserrat','Segoe UI', 'Roboto', 'Oxygen',
@@ -12,13 +13,7 @@ code {
     monospace;
 }
 
-/* @font-face {
-  font-family: "HelveticaUltraLt_0";
-  src: local("HelveticaUltraLt_0"),
-   url("./font/HelveticaUltraLt_0.ttf") 
-  format("truetype");
-  font-weight: bold;
-  } */
+
 
   
 

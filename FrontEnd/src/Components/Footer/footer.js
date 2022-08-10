@@ -5,10 +5,10 @@ const Footer = () => {
     return(
         <Main>
             <Text>
-            <p>Fulano Beltrano de Oliveira Da Silva</p>
-            <p>fulanobos@gmail.components</p>
-            <p>(31)9 9666-1111</p>
-            <p>Faculdade de Belo Horizonte</p>
+            <p>Rodrigo Vieira Batista dos Santos</p>
+            <p>rodrigo.v.santos89@gmail.com</p>
+            <p>(31) 9 8117-9925</p>
+            <p>FIAP</p>
             </Text>
 
             

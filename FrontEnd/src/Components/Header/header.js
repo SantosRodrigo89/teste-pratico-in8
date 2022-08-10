@@ -3,9 +3,11 @@ import { Main, Text, TextBox } from "./styled";
 import React from "react";
 
 const Header = () => {
+  
   return (
     <Main>
-       <Menu />
+     
+      <Menu />
       <TextBox>
         <Text>
           <h1>ESTÁGIO</h1>
